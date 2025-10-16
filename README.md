@@ -47,12 +47,12 @@ tracker = pytracker.Tracker()
 # Print discovered devices
 tracker.print_discovered_objects()
 
-# Get pose data from a controller
-pose = tracker.devices["controller_1"].get_pose_euler()
+# Get pose data from a tracker
+pose = tracker.devices["tracker_1"].get_pose_euler()
 print(f"Position: {pose[:3]}, Orientation: {pose[3:]}")
 
 # Sample data at 250 Hz for 5 seconds
-data = tracker.devices["controller_1"].sample(1250, 250)
+data = tracker.devices["tracker_1"].sample(1250, 250)
 ```
 
 ### Configuration
@@ -104,7 +104,7 @@ tracker = pytracker.Tracker()
 tracker.print_discovered_objects()
 
 while True:
-    pose = tracker.devices["controller_1"].get_pose_euler()
+    pose = tracker.devices["tracker_1"].get_pose_euler()
     if pose:
         print(f"Position: {pose[:3]}, Orientation: {pose[3:]}")
     time.sleep(0.01)  # 100 Hz
@@ -119,11 +119,11 @@ import matplotlib.pyplot as plt
 tracker = pytracker.Tracker()
 
 # Collect 1000 samples at 250 Hz
-data = tracker.devices["controller_1"].sample(1000, 250)
+data = tracker.devices["tracker_1"].sample(1000, 250)
 
 # Plot X coordinate over time
 plt.plot(data.time, data.x)
-plt.title('Controller X Coordinate')
+plt.title('Tracker X Coordinate')
 plt.xlabel('Time (seconds)')
 plt.ylabel('X Coordinate (meters)')
 plt.show()
@@ -141,7 +141,7 @@ python -m pytracker.examples.visualizer tracker_1 60 1000
 PyTracker includes several command-line tools:
 
 ```bash
-# Test controller tracking
+# Test tracker tracking
 python -m pytracker.examples.test_controller [sample_rate]
 
 # Test tracker tracking  
