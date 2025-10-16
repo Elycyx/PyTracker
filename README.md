@@ -262,7 +262,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Based on the excellent [pyopenvr library](https://github.com/cmbruns/pyopenvr) by [cmbruns](https://github.com/cmbruns)
+- Based on the excellent [pyopenvr library](https://github.com/cmbruns/pyopenvr) by [cmbruns](https://github.com/cmbruns) and [triad_openvr](https://github.com/TriadSemi/triad_openvr.git).
 - Built for the OpenVR community
 - Inspired by the need for easy-to-use VR tracking in Python
 
