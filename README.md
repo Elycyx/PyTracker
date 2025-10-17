@@ -23,6 +23,9 @@ A comprehensive Python wrapper for OpenVR tracking systems. PyTracker provides e
 - SteamVR installed and running
 - OpenVR-compatible VR hardware
 
+### Setup
+Please follow the instructions in [https://gist.github.com/DanielArnett/c9a56c9c7cc0def20648480bca1f6772?](https://gist.github.com/DanielArnett/c9a56c9c7cc0def20648480bca1f6772?) to setup your tracking system.
+
 ### Install from Source
 
 ```bash
