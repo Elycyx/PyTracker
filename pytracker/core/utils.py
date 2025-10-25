@@ -31,7 +31,7 @@ def convert_to_euler(pose_mat):
         list: [x, y, z, yaw, pitch, roll] in meters and degrees
     """
     yaw = 180 / math.pi * math.atan2(pose_mat[1][0], pose_mat[0][0])
-    pitch = 180 / math.pi * math.atan2(pose_mat[2][0], pose_mat[0][0])
+    pitch = 180 / math.pi * math.atan2(-pose_mat[2][0], math.sqrt(pose_mat[2][1]**2 + pose_mat[2][2]**2))
     roll = 180 / math.pi * math.atan2(pose_mat[2][1], pose_mat[2][2])
     x = pose_mat[0][3]
     y = pose_mat[1][3]
